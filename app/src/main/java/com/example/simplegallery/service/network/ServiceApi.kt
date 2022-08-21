@@ -16,9 +16,4 @@ interface ServiceApi {
         @Query("per_page") perPage : Int,
     ) : Call<List<ImageModel>>
 
-    @Headers("Authorization: Client-ID "+ RetrofitInstance.API_KEY)
-    @GET("search/photos")
-    fun searchImage(
-        @Query("query") query : String,
-    ) : Call<SearchModel>
 }
